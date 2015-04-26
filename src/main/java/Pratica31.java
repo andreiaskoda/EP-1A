@@ -13,25 +13,32 @@ import java.util.GregorianCalendar;
  * @author askoda
  */
 public class Pratica31 {
-    private static String meuNome;
-    private static GregorianCalendar dataNascimento;
+    private static String meuNome = "Andreia Schwalbe Koda";
+    private static GregorianCalendar dataNascimento = new GregorianCalendar(1995, 7, 23);
     private static Date inicio, fim;
     
     public static void main(String[] args) {
         inicio = new Date();
-        meuNome = "Andreia Schwalbe Koda";
+        
         System.out.println(meuNome.toUpperCase());
-        System.out.println(meuNome.substring(17, 18).toUpperCase() +
+        
+        String nomeFormatado;
+        
+        nomeFormatado = meuNome.substring(17, 18).toUpperCase() +
                 meuNome.substring(18, 21).toLowerCase() + ", "
                 + meuNome.substring(0, 1).toUpperCase() + ". "
-                + meuNome.substring(8, 9).toUpperCase() + ".\n");
+                + meuNome.substring(8, 9).toUpperCase() + ".";
         
-        dataNascimento = new GregorianCalendar(1995, 7, 23);
+        System.out.println(nomeFormatado + "\n");
+        
         System.out.println((inicio.getTime() - dataNascimento.getTimeInMillis())
         %(1000*3600*24));
         
         fim = new Date();
-        System.out.println(fim.getTime() - inicio.getTime());
+        
+        long ms = fim.getTime() - inicio.getTime();
+        
+        System.out.println(ms);
         
     }
 }
