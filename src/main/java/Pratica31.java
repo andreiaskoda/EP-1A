@@ -37,7 +37,7 @@ public class Pratica31 {
         long dias;
         
         dias = (inicio.getTime() - dataNascimento.getTimeInMillis())
-        %(1000*3600*24);
+        /(86400000);
         
         System.out.println(dias);
         
