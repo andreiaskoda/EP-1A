@@ -20,7 +20,10 @@ public class Pratica31 {
     public static void main(String[] args) {
         inicio = new Date();
         
-        System.out.println(meuNome.toUpperCase());
+        String maiusculo;
+        maiusculo = meuNome.toUpperCase();
+        
+        System.out.println(maiusculo);
         
         String nomeFormatado;
         
@@ -31,8 +34,12 @@ public class Pratica31 {
         
         System.out.println(nomeFormatado + "\n");
         
-        System.out.println((inicio.getTime() - dataNascimento.getTimeInMillis())
-        %(1000*3600*24));
+        long dias;
+        
+        dias = (inicio.getTime() - dataNascimento.getTimeInMillis())
+        %(1000*3600*24);
+        
+        System.out.println(dias);
         
         fim = new Date();
         
